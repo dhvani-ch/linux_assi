@@ -1,13 +1,17 @@
+//Program where a structure of information is passed to pthread task function, and it will display structure of information.
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 #include<pthread.h>
 
+//Sturcture defining
 struct my_thread{
 int thread_id;
 char MSG[100];
 };
 
+//void function which will call by pthread
 static void *fun(void *obj)
 {
 
@@ -23,7 +27,7 @@ return (void *) strlen(obj);
 
 int main()
 {
-
+//Declaring pthread variables
 pthread_t thread2,thread3,thread4,thread_ID;
 
 int rc;
